@@ -6,8 +6,8 @@ from astropy.visualization import ImageNormalize, LogStretch
 
 
 n = 300_000
-x = np.random.normal(0.0, 1.0, n)
-y = np.random.normal(0.0, 1.0, n)
+x = np.random.normal(0.0, 100.0, n)
+y = np.random.normal(0.0, 50.0, n)
 
 
 fig = plt.figure(figsize=(7.5, 7.5))
@@ -32,8 +32,8 @@ ax_joint.set_ylabel('Y')
 
 
 bins = 80
-ax_margx.hist(x, bins=bins, density=True, alpha=0.7, edgecolor='none')
-ax_margy.hist(y, bins=bins, density=True, orientation='horizontal',
+ax_margx.hist(x, bins=bins, density=False, alpha=0.6, edgecolor='none')
+ax_margy.hist(y, bins=bins, density=False, orientation='horizontal',
               alpha=0.7, edgecolor='none')
 ax_margx.tick_params(labelbottom=False)
 ax_margy.tick_params(labelleft=False)
